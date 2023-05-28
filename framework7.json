@@ -1,0 +1,18 @@
+{
+  "cwd": "/home/devops/IdeaProjects/f7Order",
+  "type": [
+    "web"
+  ],
+  "name": "Order",
+  "framework": "vue",
+  "template": "tabs",
+  "cssPreProcessor": false,
+  "bundler": "vite",
+  "theming": {
+    "customColor": true,
+    "color": "#4365DE",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
