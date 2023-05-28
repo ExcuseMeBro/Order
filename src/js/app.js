@@ -1,6 +1,6 @@
 // Import Vue
 import { createApp } from 'vue';
-
+import 'maz-ui/css/main.css'
 // Import Framework7
 import Framework7 from 'framework7/lite-bundle';
 

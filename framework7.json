@@ -6,12 +6,12 @@
   "name": "Order",
   "framework": "vue",
   "template": "tabs",
-  "cssPreProcessor": false,
+  "cssPreProcessor": true,
   "bundler": "vite",
   "theming": {
     "customColor": true,
     "color": "#4365DE",
-    "darkMode": false,
+    "darkMode": true,
     "iconFonts": true
   },
   "customBuild": false
