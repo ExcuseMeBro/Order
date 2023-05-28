@@ -6,9 +6,9 @@ import routes from '../js/routes.js';
 import store from '../js/store';
 
 // Framework7 Parameters
-const f7params = {
-  name: 'Order', // App name
-  theme: 'auto', // Automatic theme detection
+const f7params = ref({
+  name: 'Food Order', // App name
+  theme: localStorage.getItem('theme') || 'md', // Automatic theme detection
   colors: {
     primary: '#4365DE',
   },
@@ -17,7 +17,7 @@ const f7params = {
   store: store,
   // App routes
   routes: routes,
-};
+})
 
 // Login screen data
 const form = reactive({
@@ -46,6 +46,7 @@ const alertLoginData = () => {
     setTimeout(() => {
       localStorage.setItem('session', JSON.stringify(session.value))
       localStorage.setItem('loggedIn', true)
+      localStorage.setItem('theme', 'auto')
       f7.preloader.hide()
       f7.loginScreen.close();
       window.location.reload()
@@ -56,7 +57,8 @@ const alertLoginData = () => {
 const logout = () => {
   f7.preloader.show()
   setTimeout(() => {
-    localStorage.clear()
+    localStorage.removeItem('session')
+    localStorage.removeItem('loggedIn')
     f7.preloader.hide()
     window.location.reload()
   }, 1000)

@@ -1,0 +1,8 @@
+{
+  "appId": "uz.scala.app",
+  "appName": "Food Order",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
